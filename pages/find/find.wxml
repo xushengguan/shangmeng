@@ -1,0 +1,6 @@
+<!--pages/find/find.wxml-->
+<view class="box relative" wx:for="{{list}}" wx:key data-id='{{index}}' catchtap='jump'>
+  <image class="absolute_Y image" src="{{images}}{{item.pic}}"></image>
+  <view class="absolute_Y" style='left:83rpx;'>{{item.text}}</view>
+  <image class="boult_pic absolute_Y" src="{{back}}" style='right:24rpx;'></image>
+</view>

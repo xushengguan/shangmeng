@@ -1,0 +1,86 @@
+/* pages/business/search.wxss */
+
+@import "/com/com.wxss";
+page {
+    background: #f5f5f5
+}
+
+.white {
+    background: white;
+}
+
+input {
+    width: 571rpx;
+    height: 76rpx;
+    background: #f5f5f5;
+    border-radius: 40rpx;
+    padding: 0 12rpx;
+    font-size: 26rpx;
+}
+
+.input_ps {
+    color: #999;
+    font-size: 26rpx;
+}
+
+.input_ps image {
+    width: 22rpx;
+    height: 22rpx;
+    margin-left: 204rpx;
+    margin-right: 5rpx;
+}
+
+.txt {
+    color: #010101;
+    font-size: 30rpx;
+    margin-left: 28rpx;
+}
+
+.select_icon {
+    width: 21rpx;
+    height: 21rpx;
+    border-radius: 50%;
+    display: block;
+    margin-right: 15rpx;
+}
+
+.search_text {
+    width: 702rpx;
+    color: #010101;
+    font-size: 28rpx;
+    margin: 40rpx auto;
+    display: flex;
+    align-items: center;
+}
+
+picker {
+    width: 702rpx;
+    margin: 0 auto;
+    padding-bottom: 30rpx;
+}
+
+.search_select view {
+    font-size: 26rpx;
+    color: #999;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    height: 68rpx;
+    line-height: 68rpx;
+    padding-left: 18rpx;
+    box-sizing: border-box;
+}
+
+.search_select view:nth-of-type(2),
+.pickercls:nth-of-type(2) {
+    margin: 0 21rpx;
+}
+
+.search_select image {
+    width: 19rpx;
+    height: 10rpx;
+    right: 10rpx;
+}
+
+.pickercls {
+    flex: 1;
+}

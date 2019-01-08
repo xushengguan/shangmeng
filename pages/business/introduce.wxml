@@ -1,0 +1,58 @@
+<!--pages/business/introduce.wxml-->
+<image src="{{list.Photo ? list.Photo : images+'/images/business/bg.png'}}" class="bg_img"></image>
+<view class="card relative">
+  <image src="{{list.Photo ? list.Photo : images+'/images/business/bg.png'}}" mode="aspectFill"></image>
+  <view class="name">{{list.Name}}</view>
+  <view class="text">
+    <span class="span_txt">人数</span>{{list.MemberCount}}人
+    <block wx:if="{{list.RankName}}">
+        <span class="span_txt left">等级</span>{{list.RankName ? list.RankName : 0}}
+    </block>
+  </view>
+  <view class="top">
+    <span class="span_txt">区域</span>{{list.Area}}
+  </view>
+  <!-- <view class="top">
+    <span class="span_txt">所属分会</span>{{list.belongto}}
+  </view>
+  <view class="top">
+    <span class="span_txt">创立日期</span>{{list.build_time}}
+  </view> -->
+</view>
+
+<view class="boxTitle" style='margin-top:30rpx;'>
+  <span class="span">|</span>介绍
+</view>
+<view class='content' style='margin:25rpx auto;width:702rpx;'>{{list.Brief}}</view>
+
+<view class="boxTitle" style='margin-top:30rpx;' wx:if="{{team.length > 0}}">
+  <span class="span">|</span>领导团队
+</view>
+<view class='leader_team' wx:if="{{team.length > 0}}">
+  <!-- <view>
+    <span class="span_text">荣誉圈主</span>张英
+    <span class="span_text left">执行圈主</span>张英
+  </view> -->
+  <view class="flex_wrap leader" wx:for="{{team}}" wx:key>
+    <view class="span_text">{{item.RankName}}</view>
+    <block wx:for="{{item._UI_LeadingTeamsMember}}" wx:key>
+      <text class="teamtxt">{{item.MemberName}}</text>
+    </block>
+  </view>
+</view>
+
+
+<view class="boxTitle" style='margin-top:30rpx;' wx:if="{{list._CircleImages.length > 0}}">
+  <span class="span">|</span>商脉圈照片
+</view>
+<!-- <scroll-view scroll-Y class="scroll-view-Y relative"> -->
+      <view class="scroll-view-Y" style='padding-top:24rpx;' wx:if="{{list._CircleImages.length > 0}}">
+    <view class='scroll-Y-item pic' wx:for="{{list._CircleImages}}" wx:key>
+      <image src="{{item.Images}}"></image>
+      <view class="flex_center title">{{item.Name}}</view>
+      <view style='height:20rpx;background:#fff;'></view>
+    </view>
+  </view>
+<!-- </scroll-view> -->
+   <view class='Bigradius_button absolute_X' style='position:fixed;bottom:9rpx;' catchtap="UI_AddCircleMember" wx:if="{{list.IsJoin == 0}}">我要加入</view>
+

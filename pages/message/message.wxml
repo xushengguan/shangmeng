@@ -1,0 +1,39 @@
+<!-- pages/message/message.wxml -->
+<view style='background:#fff;'>
+  <view class='relative' style='padding-bottom:30rpx;'>
+    <!-- 搜索输入框 -->
+    <input class="margin_center input" confirm-type="search" value='{{search_text}}' bindinput='search' bindconfirm="UI_MessageInfo"></input>
+    <!-- 搜索图标 -->
+    <view class="absolute_X search_icon">
+      <image src="{{images}}{{'/images/message/search.png'}}" style="width:22rpx;height:22rpx;"></image>
+      搜索
+    </view>
+  </view>
+  <!-- 消息 -->
+  <view class="width_center border_bottom box" wx:if="{{list.length > 0}}">
+    <view class="items">
+      <view class="item flex_items" wx:for="{{list}}" wx:key="{{index}}">
+      <!-- bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" -->
+        <view class="inner txt flex_items" data-index="{{index}}" data-id="{{item}}" style="{{item.txtStyle}}" catchtap="Detail">
+          <view class="flex_items" style="width:100rpx;position:relative;">
+            <icon class="circleicon" wx:if="{{icon}}"></icon>
+            <image src="{{images+'/images/message/head_pic1.png'}}"></image>
+          </view>
+          <view class="message">
+            <view class="ellipsis m_title">
+              {{item.Title}}
+              <span class="absolute time">{{item.SendTime}}</span>
+            </view>
+            <view class="ellipsis m_text">{{item.Content}}</view>
+          </view>
+        </view>
+        <view data-index="{{index}}" data-id="{{item.Guid}}" bindtap="delItem" class="inner del">删除</view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="no-data" wx:else>
+      暂时没有数据
+  </view>
+
+</view>

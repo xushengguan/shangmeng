@@ -1,0 +1,105 @@
+/* pages/business/introduce.wxss */
+
+@import "/com/com.wxss";
+.bg_img {
+    display: block;
+    width: 100%;
+    height: 300rpx;
+}
+
+.card {
+    width: 678rpx;
+    height: 321rpx;
+    margin: 0 auto;
+    background: #fff;
+    box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.16);
+    border-radius: 10rpx;
+    margin-top: -91rpx;
+    padding-left: 24rpx;
+    color: #333;
+    font-size: 26rpx;
+}
+
+.card image {
+    width: 100rpx;
+    height: 100rpx;
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: -24rpx;
+}
+
+.name {
+    color: #010101;
+    font-size: 30rpx;
+    margin-left: 142rpx;
+    padding-top: 20rpx;
+}
+
+.text {
+    margin-top: 38rpx;
+}
+
+.span_txt {
+    color: #999;
+    margin-right: 27rpx;
+}
+
+.left {
+    margin-left: 81rpx;
+}
+
+.top {
+    margin-top: 18rpx;
+}
+
+.leader_team {
+    padding: 40rpx 24rpx;
+    font-size: 30rpx;
+    color: #999999;
+}
+
+.span_text {
+    color: #000000;
+    margin-right: 27rpx;
+}
+
+.leader {
+    margin-top: 45rpx;
+}
+
+.pic {
+    border-radius: 10rpx;
+}
+
+.pic image {
+    width: 702rpx;
+    height: 332rpx;
+    display: block;
+}
+
+.pic .title {
+    height: 68rpx;
+    line-height: 68rpx;
+    color: #000000;
+    font-size: 30rpx;
+    background: #f5f5f5;
+}
+
+.btn {
+    bottom: 9rpx;
+}
+
+.scroll-view-Y {
+    width: 702rpx;
+    margin: 0 auto;
+}
+
+.scroll-Y-item {
+    width: 100%;
+}
+
+.teamtxt {
+    margin-right: 10rpx;
+    color: 666;
+}

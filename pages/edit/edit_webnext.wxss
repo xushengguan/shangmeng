@@ -1,0 +1,28 @@
+/* pages/edit/edit_webnext.wxss */
+
+@import "/com/com.wxss";
+.white {
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+}
+
+.title_text {
+    margin-right: 24rpx;
+}
+
+.tips_text {
+    text-align: right;
+}
+
+.add_pic {
+    display: block;
+    width: 342rpx;
+    height: 256rpx;
+    margin: 30rpx auto;
+}
+
+.bigspace {
+    height: 298rpx;
+    width: 750rpx;
+    background: #f5f5f5;
+}

@@ -1,0 +1,20 @@
+<!--pages/edit/edit_webnext.wxml-->
+<view class="boxTitle flex_items white">
+  <view style='width:180rpx;'><span class="span">|</span>{{titleid==1?'案例标题':'资质标题'}} </view> 
+  <input value="{{title}}" class="flex_grow title_text" placeholder='限4~10字' placeholder-class='tips tips_text' bindinput='gettitle'></input>
+</view>
+
+<view class="boxTitle">
+  <span class="span">|</span> {{titleid==1?'案例摘要':'资质摘要'}}
+</view>
+<textarea class="textarea" placeholder='50字以内' placeholder-class='textarea_tip' maxlength='50' value="{{text}}" bindinput='gettext'></textarea>
+
+<view class="boxTitle">
+  <span class="span">|</span> {{titleid==1?'案例封面图':'资质封面图'}}
+  <span class="tips">（建议上传一张450*280像素的图片）</span>
+</view>
+<image class="add_pic" src="{{img}}" catchtap='add_pic'></image>
+
+<view class="bigspace"></view>
+
+<view class="Bigradius_button fixed_X" style='bottom:2rpx;' catchtap='jump_editweb'>确定</view>

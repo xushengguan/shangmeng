@@ -1,0 +1,36 @@
+/* pages/edit/edit_prodetail.wxss */
+@import "/com/com.wxss";
+.white{
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+.title_text{
+  margin-right:24rpx;
+}
+.tips_text{
+  text-align: right;
+}
+.add_pic{
+  display:block;width:342rpx;height:256rpx;margin:30rpx auto;
+}
+
+.publicity_pic {
+  padding-top: 24rpx;
+}
+
+.publicity_pic view, .publicity_pic image {
+  width: 342rpx;
+  height: 256rpx;
+}
+
+.publicity_pic view {
+  margin-bottom: 24rpx;
+}
+
+.publicity_pic view:nth-of-type(2n) {
+  margin-left: 18rpx;
+}
+
+.btn{
+  padding:20rpx 0;
+}

@@ -1,0 +1,134 @@
+/* pages/mine/mine.wxss */
+@import "/com/com.wxss";
+
+page {
+  background: #f5f5f5;
+}
+
+.edit, .extra, .person_info, .box {
+  margin: 0 auto;
+  width: 702rpx;
+}
+
+.person_info {
+  border-top: 1px solid #e5e5e5;
+  position: relative;
+}
+
+/* 头像 */
+
+.head_pic {
+  display: block;
+  width: 120rpx;
+  height: 120rpx;
+}
+
+/* 信息 */
+
+.info_text, .info_text view {
+  margin-left: 24rpx;
+  width: 400rpx;
+}
+
+.info_text view {
+  white-space: nowrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 编辑 */
+
+.edit {
+  height: 110rpx;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.edit view {
+  width: 190rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 28rpx;
+  background: #46c01b;
+  margin-left: 30rpx;
+}
+
+.edit view:nth-of-type(1) {
+  margin-left: 36rpx;
+}
+
+.edit image {
+  width: 24rpx;
+  height: 26rpx;
+  margin-right: 12rpx;
+}
+
+/* 人气，收藏，点赞  */
+
+.extra {
+  height: 136rpx;
+}
+
+/* 功能 */
+
+.box {
+  width: 702rpx;
+  margin: 0 auto;
+  height: 90rpx;
+  position: relative;
+}
+
+.box:nth-last-of-type(6), .box:nth-last-of-type(2) {
+  border-top: 1px solid #e5e5e5 !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+.box .icon {
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  margin-right: 17rpx;
+}
+
+/* 底部 */
+
+.footer {
+  padding-top: 28rpx;
+}
+
+.sfont {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.bfont {
+  font-size: 32rpx;
+  color: #000;
+}
+
+.font {
+  font-size: 28rpx;
+  color: #000;
+}
+
+.right {
+  right: 0;
+}
+
+.box_btn::after {
+  border: none;
+  color: #000;
+}
+
+.box_btn {
+  background: #fff;
+  color: #000;
+  font-size: 28rpx;
+  width: 702rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  border-bottom: 1px solid #e5e5e5;
+}

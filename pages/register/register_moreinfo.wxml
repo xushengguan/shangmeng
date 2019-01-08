@@ -1,0 +1,7 @@
+<!--pages/register/register_moreinfo.wxml-->
+<include src="/com/com_moreInfo.wxml"></include>
+
+<view class="space"></view>
+<view class='btn'>
+  <view class="Bigradius_button margin_center" catchtap='save'>保存</view>
+</view>

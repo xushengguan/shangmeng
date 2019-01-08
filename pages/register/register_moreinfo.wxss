@@ -1,0 +1,21 @@
+@import "/com/com.wxss";
+.publicity_pic {
+  padding-top: 24rpx;
+}
+
+.publicity_pic view, .publicity_pic image {
+  width: 342rpx;
+  height: 256rpx;
+}
+
+.publicity_pic view {
+  margin-bottom: 24rpx;
+}
+
+.publicity_pic view:nth-of-type(2n) {
+  margin-left: 18rpx;
+}
+
+.btn{
+  padding:20rpx 0;
+}

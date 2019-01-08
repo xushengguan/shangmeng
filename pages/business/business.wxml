@@ -1,0 +1,67 @@
+<!-- pages/business/business.wxml -->
+<view class="box">
+<view class="flex1">
+<view class="width_center">
+  <view class='relative' style='margin-bottom:30rpx;' catchtap='search'>
+    <!-- 搜索输入框 -->
+    <!-- <input class="margin_center" type="text" confirm-type="search" value='{{search_text}}' bindfocus='search'></input> -->
+    <view class="margin_center input">
+        {{search_text}}
+    </view>
+    <!-- 搜索图标 -->
+    <view wx:if="{{len<=0}}" class="absolute_X search_icon">
+      <image src="{{images}}{{'/images/message/search.png'}}" style="width:22rpx;height:22rpx;"></image>
+      搜索人脉或商机
+    </view>
+  </view>
+  <view class="flex_items item border_bottom" catchtap='jump_collected'>
+    <image class="item_icon" src="{{images}}{{'/images/business/mycollect_card.png'}}"></image>
+    <view class="font" style='margin-left:14rpx;'>我收藏的名片</view>
+    <view class="mfont flex_grow item_text">{{CollectCount}}</view>
+    <image class="boult_pic" src="{{images}}{{'/images/log_reg/boult.png'}}"></image>
+  </view>
+  <view class="flex_items item" catchtap='jump_mybusiness'>
+    <image class="item_pic" src="{{images}}{{'/images/business/mybusiness.png'}}"></image>
+    <view class="font" style='margin-left:14rpx;'>我的给予者商圈</view>
+    <view class="mfont flex_grow item_text">给予者分会及商圈</view>
+    <image class="boult_pic" src="{{images}}{{'/images/log_reg/boult.png'}}"></image>
+  </view>
+</view>
+<view class="flex_center nav">
+  <view wx:for="{{nav}}" wx:key class="nav_item {{currentTab==index ? 'item_active' : ''}}" data-id='{{index}}' data-index="{{item.index}}" catchtap='navbarTap'>
+    {{item.name}}
+  </view>
+</view>
+<scroll-view scroll-Y class="scroll-view-Y">
+  <block wx:if="{{list.length > 0}}">
+    
+    <view class="scroll-Y-item flex_items" wx:for="{{list}}" wx:key data-id="{{item.Guid}}" catchtap="goRoutine">
+      <!-- 头像 -->
+      <image class="head_pic" src="{{item.MinPhoto ? item.MinPhoto : images + '/images/log_reg/head.png'}}"></image>
+      <!-- 信息 -->
+      <view class="info">
+        <view class="bfont" wx-if="{{item.NickName}}">
+          {{item.RealName}}
+          <!-- <span class="sfont">(昵称)</span> -->
+        </view>
+        <view style="margin:6rpx 0;" wx-if="{{item.Position}}">{{item.Position}}</view>
+        <view wx-if="{{item.Company}}">{{item.Company}}</view>
+      </view>
+      <!-- 收藏 -->
+      <view class='collect' catchtap="UI_MemberRelation" data-param="{{item}}" data-index="{{index}}" wx:if="{{MemLoginId != item.MemLoginId}}">
+        <image src="{{images}}{{item.IsCollect == 1 ?'/images/business/collected.png':'/images/business/collect.png'}}"></image>
+        <view>{{item.IsCollect == 1?'已收藏':'收藏'}}</view>
+      </view>
+    </view>
+    </block> 
+  <view class="scroll-Y-item flex_items" wx:else>
+      <view class="no-data">暂无数据~</view>
+  </view>
+</scroll-view>
+</view>
+<!-- 底部 -->
+<view class="footer_font">
+  <view>{{footer.name}}</view>
+  <text decode="{{true}}" space="{{true}}">{{footer.technology}}&nbsp;&nbsp;&nbsp;{{footer.technology}}</text>
+</view>
+</view>

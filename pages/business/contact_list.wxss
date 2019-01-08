@@ -1,0 +1,2 @@
+/* pages/business/contact_list.wxss */
+@import "/pages/business/mybusiness_list.wxss";

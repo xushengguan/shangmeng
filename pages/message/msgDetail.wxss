@@ -1,0 +1,59 @@
+@import "/com/com.wxss";
+page {
+    background: #f5f5f5;
+}
+
+.cotent {
+    padding: 40rpx 28rpx;
+}
+
+.msg-list {
+    margin-bottom: 60rpx;
+    font-size: 32rpx;
+    position: relative;
+    padding-left: 104rpx;
+    min-height: 84rpx;
+}
+
+.pic {
+    width: 84rpx;
+    height: 84rpx;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+}
+
+.pos-rt {
+    text-align: right;
+}
+
+.username {
+    font-size: 13px;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.msg-content {
+    line-height: 50rpx;
+    background-color: #fefefe;
+    padding: 8rpx 20rpx;
+    border-radius: 6rpx;
+    display: inline-block;
+    text-align: left;
+    min-width: 300rpx;
+}
+
+.rt-msg {
+    position: relative;
+}
+
+.l_icon {
+    width: 0;
+    height: 0;
+    border-top: 10rpx solid transparent;
+    border-right: 20rpx solid #fff;
+    border-bottom: 10rpx solid transparent;
+    position: absolute;
+    top: 20rpx;
+    left: -18rpx;
+}

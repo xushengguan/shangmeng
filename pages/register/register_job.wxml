@@ -1,0 +1,5 @@
+<!--pages/register/register_job.wxml-->
+<view wx:if="{{jobs}}">
+    <view class="box" wx:for="{{jobs}}" wx:key data-index="{{item}}" catchtap='jump_registerinfo'>{{item.Name}}</view>
+</view>
+<view class="box" wx:else>暂无职位信息~</view>

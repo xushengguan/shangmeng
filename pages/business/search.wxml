@@ -1,0 +1,85 @@
+<!--pages/business/search.wxml-->
+<view class='white'>
+  <view class="width_center relative flex_items">
+    <input confirm-type="search" bindinput="bindevalue" bindconfirm="UI_MemberContacts"></input>
+    <view class="absolute_Y input_ps">
+      <image src="{{images}}{{'/images/message/search.png'}}"></image>搜索人脉或商机
+    </view>
+    <view class="txt" catchtap="UI_MemberContacts">搜索</view>
+  </view>
+
+  <view class="search_text">
+    <view style="width:295rpx;">按地区搜索</view>
+    <image class="select_icon" src="{{images}}{{islocal?'/images/mine/checked.png':'/images/mine/check.png'}}" catchtap="CityWide"></image>只看同城
+  </view>
+
+  <!-- 省市地区选择器 -->
+  <view class="flex_items" style="margin:0 21rpx;" wx:if="{{!islocal}}">
+  <picker class="pickercls" bindchange="bindMultiPickerChangeOne" value="{{OnearrIndex}}" range="{{Onearr}}"  range-key="Name">
+    <view class="search_select">
+      <view class='relative'>
+       {{Onearr[OnearrIndex].Name}}
+        <image class="absolute_Y" src="{{images}}{{'/images/business/down_pic.png'}}"></image>
+      </view>
+    </view>
+  </picker>
+  <picker class="pickercls" bindchange="bindMultiPickerChangeTwo" value="{{TwoarrIndex}}" range="{{Twoarr}}"  range-key="Name">
+    <view class="search_select">
+      <view class='relative'>
+       {{Twoarr[TwoarrIndex].Name}}
+        <image class="absolute_Y" src="{{images}}{{'/images/business/down_pic.png'}}"></image>
+      </view>
+    </view>
+  </picker>
+  <picker class="pickercls" bindchange="bindMultiPickerChangeThree" value="{{ThreearrIndex}}" range="{{Threearr}}"  range-key="Name">
+    <view class="search_select">
+      <view class='relative'>
+       {{Threearr[ThreearrIndex].Name}}
+        <image class="absolute_Y" src="{{images}}{{'/images/business/down_pic.png'}}"></image>
+      </view>
+    </view>
+  </picker>
+  </view>
+  <view class="space"></view>
+
+  <view class="search_text">
+    <view style="width:295rpx;">按行业搜索</view>
+    <image class="select_icon" src="{{images}}{{ispeer?'/images/mine/checked.png':'/images/mine/check.png'}}" catchtap="Colleague"></image>只看同行
+  </view>
+  <!-- 行业选择器 -->
+   <view class="flex_items" style="margin:0 21rpx;" wx:if="{{!ispeer}}">
+  <picker class="pickercls" bindchange="bindChangeTradeOne" value="{{TradeOneIndex}}" range="{{TradeOnearr}}"  range-key="Name">
+    <view class="search_select">
+      <view class='relative'>
+       {{TradeOnearr[TradeOneIndex].Name}}
+        <image class="absolute_Y" src="{{images}}{{'/images/business/down_pic.png'}}"></image>
+      </view>
+    </view>
+  </picker>
+  <picker class="pickercls" bindchange="bindChangeTradeTwo" value="{{TradeTwoIndex}}" range="{{TradeTwoarr}}"  range-key="Name">
+    <view class="search_select">
+      <view class='relative'>
+       {{TradeTwoarr[TradeTwoIndex].Name}}
+        <image class="absolute_Y" src="{{images}}{{'/images/business/down_pic.png'}}"></image>
+      </view>
+    </view>
+  </picker>
+  </view>
+  <view class="space"></view>
+
+  <view class="search_text">
+    <view style="width:295rpx;">按会员等级搜索</view>
+    <image class="select_icon" src="{{images}}{{ismember?'/images/mine/checked.png':'/images/mine/check.png'}}" catchtap="Member"></image>
+    只看{{Grade[0].Name}}
+  </view>
+  <!-- 会员等级选择器 -->
+  <picker bindchange="bindChangeGrade" value="{{GradeIndex}}" range="{{Grade}}" range-key="Name" wx:if="{{!ismember}}">
+    <view class="flex_items search_select">
+      <view class='relative'>
+        {{Grade[GradeIndex].Name}}
+        <image class="absolute_Y" src="{{images}}{{'/images/business/down_pic.png'}}"></image>
+      </view>
+    </view>
+  </picker>
+  <view class="space"></view>
+</view>

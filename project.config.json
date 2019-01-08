@@ -1,0 +1,105 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.3",
+	"appid": "wx8f4162c364bf40fd",
+	"projectname": "League00",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": -1,
+					"name": "register",
+					"pathName": "pages/register/register",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "eg",
+					"pathName": "eg/ed",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "register_info",
+					"pathName": "pages/register/register_info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "edit_card",
+					"pathName": "pages/edit/edit_card",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "register_info",
+					"pathName": "pages/register/register_info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "register_moreinfo",
+					"pathName": "pages/register/register_moreinfo",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "edit_card",
+					"pathName": "pages/edit/edit_card",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "mine",
+					"pathName": "pages/mine/mine",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "business",
+					"pathName": "pages/business/business",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "edit_prodetail",
+					"pathName": "pages/edit/edit_prodetail",
+					"query": ""
+				}
+			]
+		}
+	}
+}

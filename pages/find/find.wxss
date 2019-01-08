@@ -1,0 +1,16 @@
+/* pages/find/find.wxss */
+@import "/com/com.wxss";
+page{
+  background: #f5f5f5;
+}
+.box{
+  border-top:1px solid #e5e5e5;
+  height:100rpx;
+  line-height: 100rpx;
+  color:#000000;
+  font-size: 32rpx;
+  background: #fff;
+}
+.image{
+  width:40rpx;height:34rpx;left:24rpx;
+}

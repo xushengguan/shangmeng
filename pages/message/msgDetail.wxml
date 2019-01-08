@@ -1,0 +1,13 @@
+<view class="cotent">
+    <view class="msg-list" wx:for="{{list}}" wx:key>
+        <image class="pic" src="{{images+'/images/message/head_pic1.png'}}" alt="用户头像"></image>
+        <view class="rt-msg">
+            <span class="l_icon"></span>
+            <view class="msg-content">
+                <view>{{item.Title}}</view>
+                <view class="username time">{{item.SendTime}}</view>
+                <view class="username">{{item.Content}}</view>
+            </view>
+        </view>
+    </view>
+</view>

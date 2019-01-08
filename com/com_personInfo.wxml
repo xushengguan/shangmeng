@@ -1,0 +1,68 @@
+<view class='box1 relative'>
+  <view style="margin-left:24rpx;">头像</view>
+  <image class="absolute_Y head_pic head_radius" src='{{images}}' catchtap='changepic'></image>
+  <image class='absolute_Y boult_pic' src="{{back}}"></image>
+</view>
+
+
+<view class="box flex_items relative" wx:if="{{edited}}">
+  <view>姓名</view>
+  <input class="flex_grow" value='{{info.realname}}' placeholder='真实姓名' placeholder-class='text' bindinput='getrealname'></input>
+  <view class="red_point">.</view>
+</view>
+
+<view class="box flex_items relative" wx:if="{{edited}}">
+  <view>手机</view>
+  <input class="flex_grow" value='{{info.cellphone}}' placeholder='请输入手机号码' placeholder-class='text' bindinput='getcellphone'></input>
+  <view class="red_point">.</view>
+</view>
+
+<view class="box flex_items">
+  <view>昵称</view>
+  <input class="flex_grow" value='{{info.nickname}}' placeholder='起个江湖名号' placeholder-class='text' bindinput='getnickname'></input>
+</view>
+
+<view class="box flex_items relative">
+  <view>公司</view>
+  <input class="flex_grow" value='{{info.company}}' placeholder='公司全称' placeholder-class='text' bindinput='getcompany'></input>
+  <view class="red_point">.</view>
+</view>
+
+<view class="box flex_items relative">
+  <view>职位</view>
+  <view class='flex_grow text txt' catchtap='jump_registerjob'>{{info.job?info.job:'请选择职位'}}</view>
+  <image class='absolute_Y boult_pic' src="{{back}}"></image>
+  <view class="red_point">.</view>
+</view>
+
+<view class="box flex_items relative">
+  <view>行业</view>
+  <view class='flex_grow text txt' catchtap='jump_registerindustry'>{{info.industry?info.industry:'请选择行业'}}</view>
+  <image class='absolute_Y boult_pic' src="{{back}}"></image>
+  <view class="red_point">.</view>
+</view>
+
+<view class="box flex_items relative">
+  <view>城市</view>
+  <!-- <picker class="flex_grow" mode="region" value='{{city}}' bindchange="bindcityChange" style='text-align:right;color:#999;' >
+  {{info.city}}
+</picker> -->
+  <view class='flex_grow text txt' catchtap='bindcityChange'>{{info.city?info.city:'请选择所在城市'}}</view>
+  <image class='absolute_Y boult_pic' src="{{back}}"></image>
+  <view class="red_point">.</view>
+</view>
+
+<view class="box flex_items">
+  <view>地址</view>
+  <input class="flex_grow" value='{{info.address}}' placeholder='详细办公地址' placeholder-class='text' bindinput='getaddress'></input>
+</view>
+
+<view class="box flex_items">
+  <view>微信号</view>
+  <input class="flex_grow" value='{{info.wechat_number}}' placeholder='个人微信号' placeholder-class='text' bindinput='getwechat_number'></input>
+</view>
+
+<view class="box flex_items">
+  <view>邮箱</view>
+  <input class="flex_grow" value='{{info.email}}' placeholder='你的邮箱' placeholder-class='text' bindinput='getemail'></input>
+</view>

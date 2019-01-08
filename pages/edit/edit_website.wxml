@@ -1,0 +1,89 @@
+<!--pages/edit/edit_website.wxml-->
+<view class="boxTitle">
+  <span class="span">|</span> 官网封面图
+  <span class="tips">（建议上传750*350像素的图片，限4张）</span>
+</view>
+<view class='width_center flex_wrap publicity_pic'>
+  <view class="relative" wx:for="{{publicity_pic}}" wx:key>
+    <image class="border_radius" src="{{item}}"></image>
+    <image class="absolute del_img" src="{{del_url}}" data-id='{{index}}' catchtap='del_img'></image>
+  </view>
+  <view wx:if="{{num<4}}" class="border_radius relative border" style="background:#fcfcfc;" catchtap="add_pic">
+    <image class="absolute_X" src="{{images}}{{'/images/log_reg/add.png'}}" style='width:74rpx;height:74rpx;top:62rpx;'></image>
+    <span class="absolute_X" style="font-size:36rpx;color:#d3d2d2;top:168rpx;">（{{num}}/4）</span>
+  </view>
+</view>
+
+<view class="boxTitle">
+  <span class="span">|</span>公司介绍
+</view>
+<textarea class="textarea" placeholder='贵公司的实力优势、领导团队、发展历程、经营理念等，500字以内' placeholder-class='textarea_tip' maxlength='500' value='{{company_intro}}' bindinput='getcompany_intro'></textarea>
+
+<view class="boxTitle">
+  <span class="span">|</span>产品介绍
+</view>
+<textarea class="textarea" placeholder='贵公司主营产品或服务概述，500字以内' placeholder-class='textarea_tip' maxlength='500' value='{{product_intro}}' bindinput='getproduct_intro'></textarea>
+
+<!-- <block wx:for="{{title}}" wx:key data-id='{{index}}'>
+  <view class="boxTitle">
+    <span class="span">|</span>{{item.text}}
+    <span class="tips">{{item.txt}}</span>
+  </view>
+  <view> 
+  <image class="jump_pic" src="{{item.pic}}" data-id='{{index}}' catchtap='add_pho'></image>
+  </view>
+</block> -->
+<!-- 资质荣誉 -->
+<view class="boxTitle">
+  <span class="span">|</span>资质荣誉
+  <span class="tips">（建议上传450*280像素的图片）</span>
+</view>
+<view class='width_center flex_wrap publicity_pic'>
+  <view class='relative' wx:for="{{HonorImages}}" wx:key wx:if="{{HonorImages}}">
+    <image class="border_radius" src="{{item}}"></image>
+    <image class="absolute del_img" src="{{del_url}}" data-id='{{index}}' catchtap='del_HonorImages'></image>
+  </view>
+  <view wx:if="{{HonorImages_num<10 || HonorImages_num == 0}}" class="border_radius relative border" style="background:#fcfcfc;" catchtap="add_HonorImages">
+    <image class="absolute_X" src="{{images}}{{'/images/log_reg/add.png'}}" style='width:74rpx;height:74rpx;top:62rpx;'></image>
+    <span class="absolute_X" style="font-size:36rpx;color:#d3d2d2;top:168rpx;">（{{HonorImages_num}}/10）</span>
+  </view>
+</view>
+<!-- 成功案例 -->
+<view class="boxTitle">
+  <span class="span">|</span>成功案例
+  <span class="tips">（建议上传450*280像素的图片）</span>
+</view>
+<view class='width_center flex_wrap publicity_pic'>
+  <view class="relative" wx:for="{{CaseImages}}" wx:key wx:if="{{CaseImages}}">
+    <image class="border_radius" src="{{item}}"></image>
+    <image class="absolute del_img" src="{{del_url}}" data-id='{{index}}' catchtap='del_CaseImages'></image>
+  </view>
+  <view wx:if="{{CaseImages_num<10 || CaseImages_num == 0}}" class="border_radius relative border" style="background:#fcfcfc;" catchtap="add_CaseImages">
+    <image class="absolute_X" src="{{images}}{{'/images/log_reg/add.png'}}" style='width:74rpx;height:74rpx;top:62rpx;'></image>
+    <span class="absolute_X" style="font-size:36rpx;color:#d3d2d2;top:168rpx;">（{{CaseImages_num}}/10）</span>
+  </view>
+</view>
+
+<view class="boxTitle">
+  <span class="span">|</span>联系我们
+</view>
+<view class="width_center">
+  <view class="flex_center relative box">
+    <view>电话</view>
+    <input class="flex_grow" placeholder='请输入业务联系电话' value="{{phonenumber}}" bindinput='getphonenumber' maxlength='11' ></input>
+    <image class="absolute_Y" src="{{images}}{{'/images/card/card_tel.png'}}"></image>
+  </view>
+  <view class="flex_center relative box">
+    <view>网址</view>
+    <input class="flex_grow" placeholder='请输入公司官网网址' value="{{www}}" bindinput='getwww' ></input>
+  </view>
+  <view class="flex_center relative box">
+    <view>地址</view>
+    <input class="flex_grow" placeholder='请输入详细办公地址' value='{{address}}' bindinput='getaddress' ></input>
+    <image class="absolute_Y" src="{{images}}{{'/images/website/web_area.png'}}"></image>
+  </view>
+</view>
+
+<view class='space'></view>
+
+<view class="Bigradius_button btn" catchtap='save'>保存</view>

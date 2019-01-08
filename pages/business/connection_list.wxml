@@ -1,0 +1,32 @@
+<!-- pages/business/connection_list.wxml -->
+<view class='relative' style='padding:20rpx 0;background:#f5f5f5;'>
+  <!-- 搜索输入框 -->
+  <input class="margin_center input" confirm-type="search" value='{{search_text}}' bindinput='search' bindconfirm="UI_MemberContacts"></input>
+  <!-- 搜索图标 -->
+  <view wx:if="{{len<=0}}" class="absolute_X search_icon">
+    <image src="{{images}}{{'/images/message/search.png'}}" style="width:22rpx;height:22rpx;"></image>
+    搜索姓名或关键词
+  </view>
+</view>
+<scroll-view class="scroll" scroll-y="true" wx:if="{{list1.length > 0}}">
+  <view class="width_center scroll-Y-item flex_items" wx:for="{{list1}}" wx:key>
+  <!-- 头像 -->
+   <image class="head_pic" src="{{item.MinPhoto}}" wx:if="{{MinPhoto}}"></image>
+  <image class="head_pic" src="{{images}}{{'/images/card/card_img.png'}}" wx:else></image>
+  <!-- 信息 -->
+  <view class="info">
+    <view class="bfont" wx-if="{{item.RealName}}">
+      {{item.RealName}}
+      <!-- <span class="sfont">(昵称)</span> -->
+    </view>
+    <view style="margin:6rpx 0;" wx-if="{{item.Position}}">{{item.Position}}</view>
+    <view wx-if="{{item.Company}}">{{item.Company}}</view>
+  </view>
+  <!-- 收藏 -->
+  <view class='collect' catchtap="UI_MemberRelation" data-param="{{item}}" data-index="{{index}}" wx:if="{{MemLoginId != item.MemLoginId}}">
+    <image src="{{images}}{{item.IsCollect == 1 ?'/images/business/collected.png':'/images/business/collect.png'}}"></image>
+    <view>{{item.IsCollect == 1?'已收藏':'收藏'}}</view>
+  </view>
+</view>
+</scroll-view>
+<view class="no-data" wx:else>暂无数据~</view>

@@ -1,0 +1,33 @@
+<!--pages/edit/edit_product.wxml-->
+<block wx:for="{{product}}" wx:key data-id='{{index}}' wx:if="{{product.length!=0}}">
+  <view class="width_center box">
+    <!-- 图，价格 -->
+    <view class="flex_items border_bottom" style='height:198rpx;'>
+      <image class="pic" src="{{item.CoverImage}}"></image>
+      <view class="flex_grow title" style='margin-left:26rpx;'>
+        <view>{{item.Name}}</view>
+        <view>￥{{item.ShopPrice}}</view>
+      </view>
+    </view>
+    <!-- 功能 -->
+    <view class="flex_items fun">
+      <image class="select_icon" src="{{images}}{{item.IsRecommend==1?'/images/mine/checked.png':'/images/mine/check.png'}}" data-id='{{index}}' catchtap="setmain"></image>
+      <span catchtap="setmain" data-id='{{index}}'>设为主推</span>
+      <view class="edit flex_items" catchtap='edit_prodetail' data-id='{{index}}'>
+        <image src="{{images}}{{'/images/mine/icon_edit.png'}}"></image>
+        <span>编辑</span>
+      </view>
+      <view class='del flex_items' catchtap='del' data-id='{{index}}'>
+        <image src="{{images}}{{'/images/mine/icon_del.png'}}"></image>
+        <span>删除</span>
+      </view>
+    </view>
+  </view>
+  <view class="space"></view>
+</block>
+<view class="fixed_center">{{product.length==0?'暂时没有数据':''}}</view>
+<view class="bigspace" wx:if="{{product.length!=0}}"></view>
+<!-- <view class="Bigradius_button btn fixed_X" style="bottom:9rpx;" catchtap='addedit_prodetail'>增加产品</view> -->
+<view class="save">
+  <view class="Bigradius_button " catchtap='addedit_prodetail'>增加产品</view>
+</view>

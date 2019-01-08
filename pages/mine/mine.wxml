@@ -1,0 +1,63 @@
+<!--pages/mine/mine.wxml-->
+<view style='background:#fff;'>
+  <!-- 个人信息展示 -->
+  <view class="flex_items person_info" style='height:179rpx;'>
+    <image class="head_pic" src="{{info.pic && info.pic != 'null' ? info.pic : photo}}"></image>
+    <view class='sfont info_text'>
+      <view>
+        <span class="bfont">{{info.nickname}}</span>
+        <!-- (昵称) -->
+      </view>
+      <view>{{info.company}}</view>
+      <view>商圈：{{info.business_area}}</view>
+      <view>等级：{{info.level}}</view>
+    </view>
+  </view>
+  <!-- 编辑 -->
+  <view class="edit flex_items">
+    <view wx:for="{{edit}}" wx:key class="flex_center" data-id='{{index}}' catchtap='jump_edit'>
+      <image src="{{images}}{{'/images/mine/edit.png'}}"></image>
+      {{item}}
+    </view>
+  </view>
+  <!-- 人气，收藏，点赞 -->
+  <view class="flex_center extra center">
+    <view class='flex_item'>
+      <view class="bfont">{{info.popularity_num}}</view>
+      <view class="sfont">人气</view>
+    </view>
+    <view class='flex_item'>
+      <view class="bfont">{{info.collect_num}}</view>
+      <view class="sfont">收藏</view>
+    </view>
+    <view class='flex_item'>
+      <view class="bfont">{{info.like_num}}</view>
+      <view class="sfont">点赞</view>
+    </view>
+  </view>
+  <!-- 小间隔 -->
+  <view class="space"></view>
+
+  
+  <view wx:for="{{fun[0]}}" data-id='{{index}}' wx:key class='flex_items font box' catchtap="goRoutine">
+    <image class="icon" src='{{images}}{{item.icon}}'></image>
+    <view>{{item.text}}</view>
+    <image class="absolute_Y boult_pic" src="{{back}}"></image>
+  </view>
+  <view class="space"></view>
+  <button class="box box_btn flex_items" open-type="share">
+    <image class="icon" src="{{images}}{{'/images/mine/icon_invite.png'}}" style='margin-left:-28rpx;'></image>
+    <view>邀请好友加入</view>
+    <image class="absolute_Y boult_pic" src="{{back}}"></image>
+  </button>
+  <view wx:for="{{fun[1]}}" data-id='{{index}}' wx:key class='flex_items font box' catchtap="Development">
+    <image class="icon" src='{{images}}{{item.icon}}'></image>
+    <view>{{item.text}}</view>
+    <image class="absolute_Y boult_pic" src="{{back}}"></image>
+  </view>
+</view>
+
+<view class="footer_font">
+  <view>{{footer.name}}</view>
+  <text decode="{{true}}" space="{{true}}">{{footer.technology}}&nbsp;&nbsp;&nbsp;{{footer.technology}}</text>
+</view>

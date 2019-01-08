@@ -1,0 +1,46 @@
+/* pages/business/mybusiness.wxss */
+@import "/com/com.wxss";
+page{
+  background: #f5f5f5;
+}
+.box{
+  height:70rpx;
+  line-height: 70rpx;
+  color:#333;
+  font-size: 24rpx;
+}
+.bigbox{
+  height:90rpx;
+  line-height: 90rpx;
+  color:#010101;
+  font-size: 28rpx;
+  background:#fff;
+  display: flex;
+  align-items: center;
+  border-top:1px solid #e5e5e5;
+}
+.bigbox:first-of-type{
+  border-top:none;
+}
+.pic{
+  width:38rpx;
+  height:22rpx;
+}
+.right{
+  right:52rpx;
+  font-size:26rpx;
+  color:#999999;
+}
+.more{
+  color: #010101;
+  font-size: 28rpx;
+  height:90rpx;
+  border-top:1px solid #e5e5e5;
+  background: #ffffff;
+}
+.more image{
+  width:7rpx;
+  height: 14rpx;
+  display: block;
+  margin-left:12rpx;
+}

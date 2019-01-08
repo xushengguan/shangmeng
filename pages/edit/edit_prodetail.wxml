@@ -1,0 +1,46 @@
+<!--pages/edit/edit_prodetail.wxml-->
+<view class="boxTitle flex_items white">
+  <view style='width:180rpx;'><span class="span">|</span>产品标题</view> 
+  <input value="{{title}}" class="flex_grow title_text" placeholder='限4~30字' placeholder-class='tips tips_text'  bindinput='gettitle'></input>
+</view>
+
+<view class="boxTitle flex_items white">
+  <view style='width:180rpx;'><span class="span">|</span>产品售价</view> 
+  <input value="{{price}}" class="flex_grow title_text" placeholder='可写为“每箱3000元起”' placeholder-class='tips tips_text' bindinput='getprice'></input>
+</view>
+
+<view class="boxTitle">
+  <span class="span">|</span> 产品摘要
+</view>
+<textarea class="textarea" placeholder='50字以内' placeholder-class='textarea_tip' maxlength='50' value='{{Biref}}' bindinput='getBiref'></textarea>
+
+<view class="boxTitle">
+  <span class="span">|</span> 产品介绍
+</view>
+<textarea class="textarea" placeholder='产品的功能、工艺、卖点、用途等、500字以内' placeholder-class='textarea_tip' maxlength='50' value='{{intro}}' bindinput='getintro'></textarea>
+
+<view class="boxTitle">
+  <span class="span">|</span> 产品封面图
+  <span class="tips">（建议上传一张450*280像素的图片）</span>
+</view>
+<image class="add_pic" src="{{img}}" catchtap='add_pho'></image>
+
+<view class="boxTitle">
+  <span class="span">|</span>产品详情图
+  <span class="tips">（建议上传750*1000像素的图片，限10张）</span>
+</view>
+<view class='width_center flex_wrap publicity_pic'>
+  <view wx:for="{{publicity_pic}}" wx:key class="relative" wx:if="{{num > 0}}">
+    <image class="border_radius" src="{{item}}"></image>
+    <image class="absolute del_img" src="{{del_url}}" data-id='{{index}}' catchtap='del_img'></image>
+  </view>
+  <view wx:if="{{num<10}}" class="border_radius relative border" style="background:#fcfcfc;" catchtap="add_pic"> 
+    <image class="absolute_X" src="{{images}}{{'/images/log_reg/add.png'}}" style='width:74rpx;height:74rpx;top:62rpx;'></image>
+    <span class="absolute_X" style="font-size:36rpx;color:#d3d2d2;top:168rpx;">（{{num}}/10）</span>  
+  </view>
+</view>
+
+<view class="space"></view>
+<view class='btn'>
+  <view class="Bigradius_button margin_center" catchtap='save'>保存</view>
+</view>

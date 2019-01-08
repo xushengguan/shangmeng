@@ -1,0 +1,58 @@
+/* pages/register/register.wxss */
+@import "/com/com.wxss";
+
+.box{
+  width:650rpx;
+  margin: 0 auto;
+}
+/* logo */
+.logo{
+  padding-top:20rpx;padding-bottom:20rpx;display:block;width:283rpx;height:283rpx;
+}
+/* 输入框 */
+.box input{
+  width: 602rpx;
+  height:80rpx;
+  border: 1px solid #e5e5e5;
+  border-radius: 40rpx;
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  padding-left: 48rpx;
+}
+.box input:nth-of-type(1){
+  margin-top: 0;
+}
+
+.tip{
+  color:#999999;
+  font-size: 28rpx;
+}
+/* 获取验证码 */
+.sec_code{
+  margin-top:30rpx;
+  position:relative;
+  border: 1px solid #e5e5e5;
+  width: 650rpx;
+  height:80rpx;
+  border-radius: 40rpx;
+}
+.sec_code input{
+  width: 350rpx;
+  border:none;
+}
+.sec_code button{
+  color:#46C01B;font-size:30rpx;right:40rpx;
+  background: #fff;
+  text-align: center;
+}
+.sec_code button::after{
+  border:none;
+}
+/* 按钮 */
+.btn{
+  width:650rpx;margin-top:80rpx;
+}
+
+.text{
+  margin-top:30rpx;color:#010101;font-size:28rpx;
+}

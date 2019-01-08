@@ -1,0 +1,6 @@
+<!--pages/register/register_info.wxml-->
+<include src="/com/com_personInfo.wxml" />
+
+<view class='fixed_X' style='bottom:0;'>
+<view class='Bigradius_button' catchtap='jump'>下一步</view>
+</view>

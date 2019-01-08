@@ -1,0 +1,59 @@
+/* pages/register/register_info.wxss */
+
+@import "/com/com.wxss";
+page {
+    background: #f5f5f5;
+}
+
+.box1,
+.box {
+    font-size: 28rpx;
+    color: #010101;
+    background: #fff;
+}
+
+.box1 {
+    height: 128rpx;
+    line-height: 128rpx;
+    border: 1px solid #e5e5e5;
+}
+
+
+/* 头像 */
+
+.head_pic {
+    width: 100rpx;
+    height: 100rpx;
+    right: 52rpx;
+}
+
+.box {
+    height: 90rpx;
+    line-height: 90rpx;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0 24rpx;
+}
+
+.box view:nth-of-type(1) {
+    width: 100rpx;
+}
+
+.box input,
+.box view:nth-of-type(2) {
+    text-align: right;
+    color: #999999;
+}
+
+.text {
+    color: #999999;
+    font-size: 28rpx;
+}
+
+.txt {
+    margin-right: 28rpx;
+}
+
+.fixed_X {
+    width: 100%;
+    background: #fff;
+}

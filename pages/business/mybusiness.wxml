@@ -1,0 +1,35 @@
+<!-- pages/business/mybusiness.wxml -->
+<view class="boxTitle box">我加入的分会</view>
+<block wx:if="{{Mybranch.length > 0}}">
+  <view class='boxTitle bigbox relative' wx:for="{{Mybranch}}" wx:key data-Guid="{{item.Guid}}" catchtap="Detail">
+    <image class='pic' src="{{images}}{{'/images/business/business_circle.png'}}"></image>
+    <view style='margin-left:10rpx;'>{{item.Name}}</view>
+    <view class="absolute_Y right">{{item.CurrentCount}}人</view>
+    <image class='absolute_Y boult_pic' src="{{images}}{{'/images/log_reg/boult.png'}}"></image>
+  </view>
+</block>
+<view class='boxTitle bigbox relative' wx:else>您还没有加入过任何分会</view>
+<view class="boxTitle box">同城分会推荐</view>
+<block wx:if="{{GroomBranch.length > 0}}">
+  <view class='boxTitle bigbox relative' wx:for="{{GroomBranch}}" wx:key data-Guid="{{item.Guid}}" catchtap="Detail">
+    <image class='pic' src="{{images}}{{'/images/business/business_circle.png'}}"></image>
+    <view style='margin-left:10rpx;'>{{item.Name}}</view>
+    <view class="absolute_Y right">{{item.CurrentCount}}人</view>
+    <image class='absolute_Y boult_pic' src="{{images}}{{'/images/log_reg/boult.png'}}"></image>
+  </view>
+</block>
+<view class='boxTitle bigbox relative' wx:else>暂无任何推荐</view>
+<view class="boxTitle box">各大城市分会</view>
+<block wx:if="{{CityBranch.length > 0}}">
+  <view class='boxTitle bigbox relative' wx:for="{{CityBranch}}" wx:key>
+    <image class='pic' src="{{images}}{{'/images/business/business_city.png'}}"></image>
+    <view style='margin-left:10rpx;'>{{item.Name}}</view>
+    <view class="absolute_Y right">{{item.CurrentCount}}人</view>
+    <!-- <image class='absolute_Y boult_pic' src="{{images}}{{'/images/log_reg/boult.png'}}"></image> -->
+  </view>
+</block>
+<view class='boxTitle bigbox relative' wx:else>暂无任何推荐</view>
+<!-- <view class='flex_center more'>
+  <view>更多城市</view>
+  <image src="{{images}}{{'/images/business/triangle.png'}}"></image>
+</view> -->

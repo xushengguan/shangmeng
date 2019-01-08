@@ -1,0 +1,23 @@
+/* pages/edit/edit_card.wxss */
+
+@import "/pages/register/register_info.wxss";
+@import "/pages/register/register_moreinfo.wxss";
+.save {
+    width: 720rpx;
+    margin: 0rpx auto;
+}
+
+.white_bg {
+    height: 248rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.textarea2 {
+    width: 666rpx;
+    padding: 18rpx;
+    height: 164rpx;
+    border: 1px solid #e5e5e5;
+}

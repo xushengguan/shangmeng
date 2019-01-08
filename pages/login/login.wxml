@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class='box'>
+  <!-- logo -->
+  <image class="margin_center logo logo1" src="{{images}}/images/log_reg/logo.png"></image>
+
+ <!-- 输入框 -->
+  <input type="text" placeholder='请输入您的手机号码或商脉号码' value="{{account}}" placeholder-class='tip' bindinput='getphone'></input>
+
+  <input type="password" placeholder='请输入您的密码' maxlength='12' value="{{password}}" placeholder-class='tip' bindinput='getpassword'></input>
+
+  <!-- 登录按钮 -->
+  <view class='Bigradius_button btn' catchtap='login'>登录</view>
+  
+  <!-- 忘记密码，注册 -->
+  <view class="center text">
+    <span catchtap="jump_forgetpassword">忘记密码 ></span>
+    <span style="margin:0 54rpx;">|</span>  
+    <span catchtap="jump_register">注册 ></span>
+  </view>
+</view>

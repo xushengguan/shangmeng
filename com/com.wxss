@@ -1,0 +1,341 @@
+/* 弹性盒子 */
+
+.flex {
+    display: flex;
+}
+
+.flex_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex_grow {
+    flex-grow: 1;
+}
+
+.flex_item {
+    flex: 1;
+}
+
+
+/*居中 */
+
+.flex_items {
+    display: flex;
+    align-items: center;
+}
+
+.flex_content {
+    display: flex;
+    justify-content: center;
+}
+
+.flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.margin_center {
+    margin: 0 auto;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.absolute_X {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.absolute_Y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.absolute_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.fixed {
+    position: fixed;
+}
+
+.fixed_X {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fixed_Y {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fixed_center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.relative {
+    position: relative;
+}
+
+
+/* 边框 */
+
+.border {
+    border: 1px solid #e5e5e5;
+}
+
+.border_bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.border_top {
+    border-top: 1px solid #e5e5e5;
+}
+
+
+/* 圆角边框 */
+
+.border_radius {
+    border-radius: 10rpx;
+}
+
+.head_radius {
+    border-radius: 50%;
+}
+
+
+/* 遮罩层 */
+
+.shade {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0rpx;
+    left: 0rpx;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.shade_white {
+    background: transparent;
+    position: fixed;
+    top: 0rpx;
+    left: 0rpx;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+
+/* 阴影 */
+
+.shadow {
+    box-shadow: 0px 0px 0px 0px rgba(67, 79, 101, 0.5);
+}
+
+
+/* 字体换行 */
+
+.wrap {
+    white-space: normal;
+}
+
+
+/* 字体不换行 */
+
+.nowrap {
+    white-space: nowrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+
+/* 超出不换行省略 */
+
+.ellipsis {
+    white-space: nowrap;
+    word-break: break-all;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* 超出3行换行省略 */
+
+.wrap_ellipsis {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+
+/* 主要字体 */
+
+.main_font {
+    color: #666;
+    font-size: 24rpx;
+}
+
+
+/* 圆角边框按钮 */
+
+.radius_button {
+    width: 260rpx;
+    height: 60rpx;
+    border-radius: 30rpx;
+    line-height: 60rpx;
+    text-align: center;
+    background: #46c01b;
+    color: #fff;
+    font-size: 30rpx;
+}
+
+
+/* 大圆角边框按钮 */
+
+.Bigradius_button {
+    width: 702rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    background: #46c01b;
+    color: #fff;
+    border-radius: 40rpx;
+    font-size: 32rpx;
+    margin: 9rpx auto;
+}
+
+
+/* 小间隔 */
+
+.space {
+    background: #f5f5f5;
+    height: 20rpx;
+    width: 100%;
+}
+
+.width_center {
+    width: 100%;
+    padding: 0 20rpx;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+
+/* 业务介绍 */
+
+.boxTitle {
+    color: #010101;
+    font-size: 30rpx;
+    line-height: 80rpx;
+    height: 80rpx;
+    padding-left: 24rpx;
+    background: #f5f5f5;
+    box-sizing: border-box;
+}
+
+.boxTitle .span {
+    color: #46C01B;
+    font-weight: bolder;
+    margin-right: 11rpx;
+}
+
+.boxTitle .tips {
+    color: #666666;
+    font-size: 26rpx;
+}
+
+.content {
+    font-size: 24rpx;
+    color: #333;
+    margin: 25rpx 0;
+    line-height: 48rpx;
+}
+
+
+/* 大于号图片 */
+
+.boult_pic {
+    width: 12rpx;
+    height: 24rpx;
+    right: 24rpx;
+}
+
+
+/* 输入文本域 */
+
+.textarea {
+    width: 666rpx;
+    height: 164rpx;
+    line-height: 48rpx;
+    margin: 24rpx auto;
+    border: 1px solid #e5e5e5;
+    font-size: 24rpx;
+    padding: 18rpx;
+}
+
+.textarea_tip {
+    line-height: 48rpx;
+    color: #999999;
+    font-size: 24rpx;
+}
+
+.footer_font {
+    color: #888888;
+    font-size: 24rpx;
+    text-align: center;
+    background: #f5f5f5;
+    padding: 20rpx;
+}
+
+.no-data {
+    font-size: 28rpx;
+    padding: 20rpx;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.del_img {
+    width: 40rpx !important;
+    height: 40rpx !important;
+    top: -10rpx;
+    right: -10rpx;
+}
+
+.red_point {
+    background: #F7564C !important;
+    width: 10rpx;
+    height: 10rpx;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 90rpx;
+    border-radius:50%;
+    color:#fff !important;
+
+}

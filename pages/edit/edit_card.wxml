@@ -1,0 +1,12 @@
+<!--pages/edit/edit_card.wxml-->
+<include src="/com/com_personInfo.wxml" />
+
+<include src="/com/com_moreInfo.wxml" />
+
+<view class="footer_font">
+  <view>{{footer.name}}</view>
+  <text decode="{{true}}" space="{{true}}">{{footer.technology}}&nbsp;&nbsp;&nbsp;{{footer.technology}}</text>
+</view>
+<view style='background:#fff;padding:20rpx 0;'>
+<view class="Bigradius_button save" catchtap='save'>保存</view> 
+</view>

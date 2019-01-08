@@ -1,0 +1,31 @@
+<!--pages/business/collected.wxml-->
+<view class="white">
+  <view class="width_center">
+    <view class='relative' style='padding-bottom:30rpx;'>
+      <!-- 搜索输入框 -->
+      <input class="margin_center radius input" confirm-type="search" value='{{search_text}}' bindinput='search' bindconfirm="UI_MyCollectMember"></input>
+      <!-- 搜索图标 -->
+      <view class="absolute_X search_icon txt">
+        <image src="{{images}}{{'/images/message/search.png'}}" style="width:22rpx;height:22rpx;"></image> 输入姓名、公司或城市、行业
+      </view>
+    </view>
+
+    <block wx:if="{{list.length > 0}}">
+       <view class="scroll-Y-item flex_items top" wx:for="{{list}}" wx:key data-id="{{item.Guid}}" catchtap="goRoutine">
+      <!-- 头像 -->
+      <image class="head_pic" src="{{item.MinPhoto ? item.MinPhoto : images+'/images/card/card_img.png'}}"></image>
+      <!-- 信息 -->
+      <view class="info info_width">
+        <view class="bfont" wx:if="{{item.NickName}}">{{item.NickName}}
+          <!-- <span class="sfont">(昵称)</span> -->
+        </view>
+        <view wx:if="{{item.Position}}" style="margin:6rpx 0;">{{item.Position}}</view>
+        <view wx:if="{{item.Company}}">{{item.Company}}</view>
+      </view>
+      <!-- 手机号 -->
+      <image class="icon_phone" src="{{images}}{{'/images/card/card_tel.png'}}" data-tel='{{item.Mobile}}' wx:if="{{item.Mobile}}" catchtap="PhoneCall"></image>
+    </view>
+    </block>
+    <view class="no-data" wx:else>暂无数据~</view>
+  </view>
+</view>

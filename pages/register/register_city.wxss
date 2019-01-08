@@ -1,0 +1,63 @@
+/* pages/register/register_industry.wxss */
+
+@import "/com/com.wxss";
+page {
+    background: #f7f7f7;
+}
+
+.nodata {
+    font-size: 28rpx;
+    padding: 20rpx;
+}
+
+.box {
+    width: 750rpx;
+    height: 100%;
+    border-top: 2px solid #f9f9f9;
+    font-size: 30rpx;
+    position: fixed;
+}
+
+scroll-view {
+    height: 100%;
+}
+
+
+/* 左边列表 */
+
+.left {
+    width: 320rpx;
+    background: #fff;
+}
+
+.left_item {
+    height: 99rpx;
+    /* border-bottom: 2px solid #f9f9f9; */
+    text-align: center;
+    line-height: 100rpx;
+}
+
+.left_active {
+    background: #f7f7f7;
+    /* color: #46C01B;
+  border-bottom: 2px solid #46C01B; */
+}
+
+
+/* 右边列表 */
+
+.right {
+    width: 450rpx;
+    background: #F7F7F7;
+}
+
+.right_item {
+    margin: 0 auto;
+    margin-top: 30rpx;
+    text-align: center;
+    line-height: 96rpx;
+}
+
+.right_item:last-child {
+    margin-bottom: 30rpx;
+}

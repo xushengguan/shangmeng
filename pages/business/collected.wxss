@@ -1,0 +1,26 @@
+/* pages/business/collected.wxss */
+@import "/pages/business/business.wxss";
+page{
+  background:#f5f5f5;
+}
+.white{
+  background:#ffffff;
+}
+.txt{
+  font-size:25rpx;
+}
+.top{
+  border-bottom:none;
+  border-top:1px solid #e5e5e5;
+}
+.radius{
+  border-radius: 40rpx;
+}
+.icon_phone{
+  width: 27rpx;
+  height:28rpx;
+  display: block;
+}
+.info_width{
+  width:520rpx;
+}

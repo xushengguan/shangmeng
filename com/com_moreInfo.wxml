@@ -1,0 +1,35 @@
+<view class="boxTitle">
+  <span class="span">|</span>业务简介
+</view>
+<view class='white_bg'>
+<textarea class="textarea textarea2" placeholder='你的主营业务、优势卖点、个人资历，100字以内' placeholder-class='textarea_tip' maxlength='100' value='{{work}}' bindinput='getwork'></textarea>
+</view>
+
+<view class="boxTitle">
+  <span class="span">|</span>分享资源
+</view>
+<view class='white_bg'>
+<textarea class="textarea textarea2" placeholder='你可分享的客户、渠道、专长、人脉等营销资源，50字以内' placeholder-class='textarea_tip' maxlength='50' value='{{share_resource}}' bindinput='getshare_resource'></textarea>
+</view>
+
+<view class="boxTitle">
+  <span class="span">|</span>需求资源
+</view>
+<view class='white_bg'>
+<textarea class="textarea textarea2" placeholder='你需求的客户、渠道、专长、供应商等营销资源，50字以内' placeholder-class='textarea_tip' maxlength='50' value='{{demand_resources}}' bindinput='getdemand_resources'></textarea>
+</view>
+
+<view class="boxTitle">
+  <span class="span">|</span>宣传图片
+</view>
+<view class='width_center flex_wrap publicity_pic'>
+  <view class="relative" wx:for="{{publicity_pic}}" wx:key wx:if="{{publicity_pic.length!=0}}">
+    <image class="border_radius" src="{{item}}"></image>
+    <image class="absolute del_img" src="{{del_url}}" data-id='{{index}}' catchtap='del_img'></image>
+  </view>
+  <view wx:if="{{num<10}}" class="border_radius relative border" style="background:#fcfcfc;" catchtap="add_pic"> 
+    <image class="absolute_X" src="{{add_images}}" style='width:74rpx;height:74rpx;top:62rpx;'></image>
+    <span class="absolute_X" style="font-size:36rpx;color:#d3d2d2;top:168rpx;">（{{num}}/10）</span> 
+    <!-- <image class="absolute" src="{{images}}{{'/images/tarbar/icon_'}}"></image>  -->
+  </view>
+</view>

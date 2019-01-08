@@ -1,0 +1,15 @@
+<!--pages/guide/guide.wxml-->
+<!-- <swiper indicator-dots indicator-color='#ACCFFF' indicator-active-color='#ffffff' interval='3000' duration='300'>
+  <view wx:for="{{swiper_pic}}" wx:key data-id='{{index}}'>
+    <swiper-item>
+      <image src="{{images}}{{item}}">
+      </image>
+      <button class="absolute_X {{index==0?'guideA':'guideB'}}" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权进入</button>
+    </swiper-item>
+  </view>
+</swiper> -->
+<view class='absolute_X' style="top:20%;">
+  <image src="{{logo}}" class="img margin_center" mode="aspectFit"></image>
+  <view class='text'>允许微信授权后，可体验更多功能</view>
+  <button class="Bigradius_button" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+</view>

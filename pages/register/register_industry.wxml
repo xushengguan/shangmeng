@@ -1,0 +1,14 @@
+<!--pages/register/register_industry.wxml-->
+<view class="flex box" wx:if="{{leftlist.length > 0}}">
+  <!-- 父行业 -->
+  <scroll-view scroll-y class="left">
+    <view class="left_item {{id==index?'left_active':''}}" wx:for="{{leftlist}}" wx:key data-item='{{item}}' data-id="{{index}}" bindtap='nav_left'>{{item.Name}}</view>
+  </scroll-view>
+  <!-- 子行业 -->
+  <scroll-view scroll-y class='right'>
+    <view class="right_item" wx:for="{{rightlist}}" data-idx='{{item}}' wx:key bindtap='nav_right'>{{item.Name}}</view>
+  </scroll-view>
+</view>
+<view  class="nodata" wx:else>
+    暂无行业数据~
+</view>

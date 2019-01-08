@@ -1,0 +1,59 @@
+/* pages/guide/guide.wxss */
+@import "/com/com.wxss";
+
+/* page {
+  width: 100%;
+  height: 100%;
+}
+
+swiper {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 99;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+button, cover-view {
+  z-index: 100;
+  bottom: 171rpx;
+  width: 293rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 60rpx;
+  background-color: transparent;
+}
+
+.guideA {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.guideB {
+  background: #fff;
+  color: #6294e1;
+} */
+.img {
+  display: block;
+  width: 283rpx;
+  height: 283rpx;
+  padding: 20rpx 0;
+}
+
+.text {
+  color: #999;
+  font-size: 28rpx;
+  text-align: center;
+  margin-bottom: 30rpx;
+  margin-top: 40rpx;
+}

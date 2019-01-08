@@ -1,0 +1,70 @@
+{
+    "pages": [
+        "pages/guide/guide",
+        "pages/register/register",
+        "pages/register/register_info",
+        "pages/register/register_industry",
+        "pages/register/register_city",
+        "pages/register/register_job",
+        "pages/register/register_moreinfo",
+        "pages/business/business",
+        "pages/edit/edit_card",
+        "pages/edit/edit_website",
+        "pages/edit/edit_product",
+        "pages/edit/edit_webnext",
+        "pages/edit/edit_prodetail",
+        "pages/business/collected",
+        "pages/business/mybusiness",
+        "pages/business/mybusiness_list",
+        "pages/business/contact_list",
+        "pages/business/connection_list",
+        "pages/business/search",
+        "pages/business/introduce",
+        "pages/find/find",
+        "pages/mine/mine",
+        "pages/message/message",
+        "pages/login/login",
+        "pages/message/msgDetail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#f5f5f5",
+        "onReachBottomDistance": 50
+    },
+    "tabBar": {
+        "color": "#666666",
+        "selectedColor": "#46C01B",
+        "backgroundColor": "#fcfcfc",
+        "borderStyle": "white",
+        "position": "bottom",
+        "list": [{
+                "pagePath": "pages/business/business",
+                "iconPath": "/images/tarbar/icon_buss.png",
+                "selectedIconPath": "/images/tarbar/icon_busshover.png",
+                "text": "商脉"
+            },
+            {
+                "pagePath": "pages/message/message",
+                "iconPath": "/images/tarbar/icon_message.png",
+                "selectedIconPath": "/images/tarbar/icon_messagehover.png",
+                "text": "消息"
+            },
+            {
+                "pagePath": "pages/find/find",
+                "iconPath": "/images/tarbar/icon_find.png",
+                "selectedIconPath": "/images/tarbar/icon_findhover.png",
+                "text": "发现"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "iconPath": "/images/tarbar/icon_mine.png",
+                "selectedIconPath": "images/tarbar/icon_minehover.png",
+                "text": "我"
+            }
+        ]
+    },
+    "navigateToMiniProgramAppIdList": ["wx3b3add3b680c49f0"]
+}

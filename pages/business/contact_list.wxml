@@ -1,0 +1,57 @@
+<!--pages/business/contact_list.wxml-->
+<!-- 头部信息 -->
+<view class="box flex_items relative" catchtap="goPage" data-id="{{list.Guid}}" data-type="{{'5'}}">
+  <image class="pic" src="{{list.Photo}}" mode='aspectFill' wx:if="{{list.Photo}}"></image>
+  <image class="pic" src="{{images}}{{'/images/business/bg.png'}}" mode='aspectFill' wx:else></image>
+  <!-- 信息 -->
+  <view style='color:#666666;font-size:22rpx;margin-left:20rpx;'>
+    <view style='color:#010101;font-size:30rpx;'>{{list.Name}}</view>
+    <view>
+      <span style="margin-right:30rpx;">人数：{{list.MemberCount}}人</span>
+      等级：{{list.RankName ? list.RankName : 0}}
+    </view>
+    <view>区域：{{list.Area}}</view>
+  </view>
+  <!-- 加入 -->
+  <view class="absolute flex_center button_btn" wx:if="{{list.IsJoin == 0}}" catchtap="UI_AddCircleMember" data-param="{{list.Guid}}" data-index="{{index}}" data-type="{{'4'}}">
+    <image src="{{images}}{{'/images/business/join.png'}}"></image>
+    <span>加入</span>
+  </view>
+  <view class='absolute flex_center button_btn' wx:else>
+    <span>已加入</span>
+  </view>
+  <image class="absolute boult_pic bottom_pic" src="{{images}}{{'/images/log_reg/boult.png'}}"></image>
+</view>
+<view class='space'></view>
+
+<view class='relative' style='padding:20rpx 0;background:#f5f5f5;' wx:if="{{list1.length > 0 || search_text}}">
+  <!-- 搜索输入框 -->
+  <input class="margin_center input" confirm-type="search" value='{{search_text}}' bindinput='search' bindconfirm="UI_MemberContacts"></input>
+  <!-- 搜索图标 -->
+  <view class="absolute_X search_icon">
+    <image src="{{images}}{{'/images/message/search.png'}}" style="width:22rpx;height:22rpx;"></image>
+    搜索姓名或关键词
+  </view>
+</view>
+<block wx:if="{{list1.length > 0}}">
+<view class="width_center scroll-Y-item flex_items" wx:for="{{list1}}" wx:key  data-id="{{item.Guid}}" catchtap="goRoutine">
+  <!-- 头像 -->
+  <image class="head_pic" src="{{item.MinPhoto ? item.MinPhoto : images + '/images/log_reg/head.png'}}"></image>
+  <!-- 信息 -->
+  <view class="info">
+    <view class="bfont" wx:if="{{item.NickName}}">
+      {{item.NickName}}
+      <!-- <span class="sfont">(昵称)</span> -->
+    </view>
+    <view style="margin:6rpx 0;" wx:if="{{item.Position}}">{{item.Position}}</view>
+    <view wx:if="{{item.Company}}">{{item.Company}}</view>
+  </view>
+  <!-- 收藏 -->
+  <view class='collect' catchtap="UI_MemberRelation" data-param="{{item}}" data-index="{{index}}" wx:if="{{MemLoginId != item.MemLoginId}}">
+    <image src="{{images}}{{item.IsCollect?'/images/business/collected.png':'/images/business/collect.png'}}"></image>
+    <view>{{item.IsCollect?'已收藏':'收藏'}}</view>
+  </view>
+</view>
+</block>
+<view class="no-data" wx:else>暂无商脉成员~</view>
+
